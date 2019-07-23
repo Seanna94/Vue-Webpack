@@ -62,13 +62,22 @@ const config={
 
 //判断当前环境
 if(isDEV){
+    config.devtool ='#cheap-module-eval-source-map'  //映射代码，使vue可以在浏览器调试
     config.devServer ={
         port:8000,
         host:'0.0.0.0',//可以在本机访问，也可以在内网访问
         overlay:{
             errors:true,
-        }
+        },
+        hot:true,   //只渲染当前页面数据，不重新加载页面
+        // historyFallback:{ //处理路由映射
+        // }
+        // open:true   //打包的时候打开浏览器
     }
+    config.plugins.push(
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoEmitOnErrorsPlugin()
+    )
 }
 
 module.exports=config
