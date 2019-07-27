@@ -19,6 +19,10 @@ const config={
                 loader:'vue-loader'   //使用vue-loader处理以.vue结尾的文件，输出js代码
             },
             {
+                test:/.jsx$/,
+                loader:'babel-loader'   //使用babel-loader处理以.jsx结尾的文件，输出js代码
+            },
+            {
                 test:/.css$/,
                 use:[
                     'style-loader',   //使用将css插入到html文件中的方法加载css，最终会打包成js文件
@@ -30,6 +34,12 @@ const config={
                 use:[
                     'style-loader',
                     'css-loader',
+                    {
+                        loader:'postcss-loader',
+                        options:{
+                          sourceMap:true,
+                        }
+                    },
                     'stylus-loader'
                 ]
             },
