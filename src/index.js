@@ -1,8 +1,9 @@
 import Vue from 'vue'   //引用vue类库
 import App from './app.vue'
-import './assets/styles/test.css'  
-import './assets/styles/test-stylus.styl'
-import './assets/images/template.png'
+import './assets/styles/global.styl'
+// import './assets/styles/test.css'  
+// import './assets/styles/test-stylus.styl'
+// import './assets/images/template.png'
 
 const root = document.createElement('div')  //创建div节点
 document.body.appendChild(root);            //将div节点添加到body下
