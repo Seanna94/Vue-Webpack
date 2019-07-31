@@ -4,6 +4,9 @@
     </header>
 </template>
 
+<style lang="stylus">
+
+</style>
 
 <style lang="stylus" scoped>
     .main-header

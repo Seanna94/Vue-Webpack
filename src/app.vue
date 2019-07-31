@@ -21,8 +21,10 @@ export default{
 }
 </script>
 
+<style lang="stylus">
 
-<style lang="stylus" scoped>  //scoped指定样式只应用于该组件内；lang="stylus"指定哪个组件进行解析
+</style>
+<style lang="stylus" scoped>  
 #app{
     position absolute
     left 0
